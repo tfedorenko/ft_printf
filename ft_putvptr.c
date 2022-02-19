@@ -12,17 +12,17 @@
 
 #include "ft_printf.h"
 
-int ft_putvptr (void *ptr)
+int	ft_putvptr(void *ptr)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if(!ptr)
-      i += ft_putstr("0x0");
-    else
-    {
-	  	i += ft_putstr("0x");
-		  i += ft_puthnbr(((unsigned long long int)ptr), 0);
-    }
+	i = 0;
+	if (!ptr)
+		i += ft_putstr("0x0");
+	else
+	{
+		i += ft_putstr("0x");
+		i += ft_puthnbr(((unsigned long long int)ptr), 0);
+	}
 	return (i);
 }

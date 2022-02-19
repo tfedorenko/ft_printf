@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-static int ft_nbrlen(int n)
+static int	ft_nbrlen(int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n == 0)
@@ -22,26 +22,26 @@ static int ft_nbrlen(int n)
 	if (n < 0)
 	{
 		i++;
-		n = -n;		
-	}	
+		n = -n;
+	}
 	while (n > 0)
 	{
 		i++;
 		n /= 10;
-	}	
-	return(i);
+	}
+	return (i);
 }
 
 int	ft_putnbr(int n)
 {
-	int i;
+	int	i;
 
 	i = ft_nbrlen(n);
 	if (n == -2147483648)
 	{
 		ft_putstr("-2147483648");
 		return (11);
-	}	
+	}
 	if (n < 0)
 	{
 		ft_putchar('-');
@@ -54,7 +54,7 @@ int	ft_putnbr(int n)
 	}
 	else
 	{
-		ft_putchar(n + '0');		
+		ft_putchar(n + '0');
 	}
-    return (i);
+	return (i);
 }

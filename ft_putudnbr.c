@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-static int ft_unbrlen(unsigned int n)
+static int	ft_unbrlen(unsigned int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n == 0)
@@ -23,15 +23,15 @@ static int ft_unbrlen(unsigned int n)
 	{
 		i++;
 		n /= 10;
-	}	
-	return(i);
+	}
+	return (i);
 }
 
-int ft_putudnbr (unsigned int n)
+int	ft_putudnbr(unsigned int n)
 {
-    int i;
+	int	i;
 
-    i = ft_unbrlen(n);
+	i = ft_unbrlen(n);
 	if (n >= 10)
 	{
 		ft_putudnbr(n / 10);
@@ -39,5 +39,5 @@ int ft_putudnbr (unsigned int n)
 	}
 	else
 		ft_putchar(n + '0');
-    return (i);
+	return (i);
 }
