@@ -15,10 +15,10 @@ NAME = libftprintf.a
 SRC =	ft_printf.c \
 		ft_putchar.c \
 		ft_putstr.c \
-		ft_putvptr.c \
+		ft_putvoidptr.c \
 		ft_putnbr.c \
-		ft_putudnbr.c \
-		ft_puthnbr.c 
+		ft_putunsignednbr.c \
+		ft_puthexadecimalnbr.c 
 
 OBJ = $(SRC:.c=.o)
 

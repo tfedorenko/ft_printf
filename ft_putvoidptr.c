@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   ft_putvoidptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_putvptr(void *ptr)
+int	ft_putvoidptr(void *ptr)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_putvptr(void *ptr)
 	else
 	{
 		i += ft_putstr("0x");
-		i += ft_puthnbr(((unsigned long long int)ptr), 0);
+		i += ft_puthexadecimalnbr(((unsigned long long int)ptr), 0);
 	}
 	return (i);
 }

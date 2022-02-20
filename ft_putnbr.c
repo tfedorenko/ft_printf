@@ -53,8 +53,6 @@ int	ft_putnbr(int n)
 		ft_putnbr(n % 10);
 	}
 	else
-	{
 		ft_putchar(n + '0');
-	}
 	return (i);
 }

@@ -21,15 +21,15 @@ static int	ft_conversions(char ch, va_list *ap, int count)
 	else if (ch == 's')
 		count += ft_putstr(va_arg(*ap, char *));
 	else if (ch == 'p')
-		count += ft_putvptr(va_arg(*ap, void *));
+		count += ft_putvoidptr(va_arg(*ap, void *));
 	else if (ch == 'd' || ch == 'i')
 		count += ft_putnbr(va_arg(*ap, int));
 	else if (ch == 'u')
-		count += ft_putudnbr(va_arg(*ap, unsigned int));
+		count += ft_putunsignednbr(va_arg(*ap, unsigned int));
 	else if (ch == 'x')
-		count += ft_puthnbr(va_arg(*ap, unsigned int), 0);
+		count += ft_puthexadecimalnbr(va_arg(*ap, unsigned int), 0);
 	else if (ch == 'X')
-		count += ft_puthnbr(va_arg(*ap, unsigned int), 1);
+		count += ft_puthexadecimalnbr(va_arg(*ap, unsigned int), 1);
 	return (count);
 }
 
